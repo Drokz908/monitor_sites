@@ -1,0 +1,125 @@
+🌐 Monitoramento de Disponibilidade de Sites
+
+Visão Geral do Projeto
+Este projeto Python é uma solução robusta e automatizada para monitorar a disponibilidade e o status de websites. Desenvolvido para garantir a proatividade na detecção de falhas, ele verifica periodicamente uma lista de URLs, registra os resultados em um banco de dados SQLite local e envia alertas por e-mail em tempo real caso algum problema seja detectado.
+
+A solução é ideal para pequenas e médias empresas, desenvolvedores ou administradores de sistemas que precisam de uma ferramenta simples, mas eficaz, para acompanhar a saúde de seus serviços online, minimizando o tempo de inatividade e garantindo a continuidade das operações.
+
+🚀 Funcionalidades
+Verificação de Status HTTP: Realiza requisições HTTP GET para URLs configuradas e registra o código de status (ex: 200 OK, 404 Not Found, 500 Internal Server Error).
+
+Tratamento de Erros de Conexão: Identifica e categoriza falhas de rede como erros SSL, timeouts e problemas de conexão, atribuindo códigos numéricos específicos para fácil identificação.
+
+Persistência de Dados: Armazena todos os resultados das verificações (site, status, mensagem e data/hora) em um banco de dados SQLite (monitor.db) para análise histórica e relatórios.
+
+Sistema de Alerta por E-mail: Envia notificações automáticas por e-mail para um endereço configurado sempre que um site apresentar um status diferente de "OK" (código 200).
+
+Logging Detalhado: Mantém um registro (monitor_sites.log) de todas as operações e eventos importantes, facilitando a depuração e o acompanhamento do histórico de execuções.
+
+Configuração Segura: Utiliza variáveis de ambiente (.env) para gerenciar credenciais sensíveis (como dados de e-mail), garantindo que não sejam expostas no código-fonte.
+
+Agendamento Flexível: Projetado para ser executado em intervalos regulares usando agendadores de tarefas do sistema operacional (como cron no Linux/macOS ou Agendador de Tarefas no Windows).
+
+🛠️ Tecnologias Utilizadas
+Python 3.x: Linguagem de programação principal.
+
+requests: Biblioteca HTTP para fazer requisições web.
+
+sqlite3: Módulo embutido do Python para interação com bancos de dados SQLite.
+
+datetime: Módulo Python para manipulação de datas e horas.
+
+logging: Módulo Python para registro de eventos e depuração.
+
+smtplib & email.mime: Módulos Python para envio de e-mails via SMTP.
+
+python-dotenv: Biblioteca para carregar variáveis de ambiente de arquivos .env.
+
+⚙️ Como Configurar e Rodar
+Siga estes passos para colocar o monitoramento em funcionamento:
+
+1. Pré-requisitos
+Python 3.x instalado.
+
+Acesso à linha de comando (terminal/CMD/PowerShell).
+
+2. Clonar o Repositório (se estiver no GitHub)
+git clone <URL_DO_SEU_REPOSITORIO>
+cd monitor-de-sites # ou o nome da sua pasta
+
+3. Instalar Dependências
+pip install requests python-dotenv
+
+4. Configurar Credenciais (Arquivo .env)
+Crie um arquivo chamado .env (com o ponto na frente) na raiz do projeto e adicione suas credenciais de e-mail. Este arquivo NUNCA deve ser enviado para o GitHub.
+
+EMAIL_SENDER=seu_email@gmail.com
+EMAIL_PASSWORD=sua_senha_de_aplicativo_do_gmail # Ou senha normal, dependendo do provedor
+EMAIL_RECEIVER=email_destino_alerta@exemplo.com
+SMTP_SERVER=smtp.gmail.com
+SMTP_PORT=587
+
+Importante para Gmail: Se estiver usando Gmail, você precisará ativar a "Verificação em duas etapas" e gerar uma "Senha de aplicativo" nas configurações de segurança da sua conta Google. Use essa senha de aplicativo em EMAIL_PASSWORD.
+
+5. Configurar Sites para Monitorar (Arquivo sites.txt)
+Crie um arquivo chamado sites.txt na raiz do projeto. Liste as URLs que você deseja monitorar, uma por linha:
+
+https://www.google.com
+https://www.youtube.com
+https://site-que-nao-existe.com
+
+6. Executar o Script
+Para testar o script manualmente:
+
+python monitor.py
+
+7. Agendar a Execução (Monitoramento Contínuo)
+Para que o script seja executado automaticamente em intervalos regulares (ex: a cada 1 minuto), use o agendador de tarefas do seu sistema operacional:
+
+No Linux/macOS (usando cron):
+
+Abra o editor do crontab: crontab -e
+
+Adicione a linha (substitua /caminho/completo/para/monitor.py pelo caminho real do seu script):
+
+* * * * * python3 /caminho/completo/para/monitor.py >> /var/log/monitor_sites.log 2>&1
+
+Isso redirecionará a saída do script para um arquivo de log para depuração.
+
+No Windows (usando Agendador de Tarefas):
+
+Pesquise por "Agendador de Tarefas" no menu Iniciar.
+
+Crie uma "Tarefa Básica", configure um gatilho para repetir a cada "1 minuto", e na ação, aponte para o executável do Python (ex: C:\Python39\python.exe) e passe o caminho completo do seu script monitor.py como argumento.
+
+📁 Estrutura do Projeto
+.
+├── monitor.py           # Script principal de monitoramento
+├── .env                 # Variáveis de ambiente (IGNORADO pelo Git)
+├── sites.txt            # Lista de URLs para monitorar
+├── monitor.db           # Banco de dados SQLite (IGNORADO pelo Git)
+├── monitor_sites.log    # Arquivo de log (IGNORADO pelo Git)
+└── .gitignore           # Define arquivos e pastas a serem ignorados pelo Git
+
+Os arquivos .env, monitor.dv e monitor_sites.log deveriam estar no .gitignore, afim de demonstração foram incluidos também no push.
+
+📈 Melhorias Futuras (Oportunidades de Expansão)
+Interface Web: Desenvolver uma interface gráfica para visualização dos dados históricos e configuração dos sites.
+
+Múltiplos Destinatários de Alerta: Permitir configurar uma lista de e-mails ou outros canais (SMS, Telegram) para alertas.
+
+Relatórios Personalizados: Gerar relatórios diários/semanais de disponibilidade.
+
+Monitoramento de Conteúdo: Verificar se um texto específico está presente na página, além do status HTTP.
+
+Métricas de Desempenho: Registrar tempo de resposta dos sites.
+
+Dockerização: Empacotar a aplicação em um contêiner Docker para facilitar a implantação.
+
+Cloud Deployment: Implantar a solução em plataformas de nuvem (AWS Lambda, Google Cloud Functions) para monitoramento sem servidor.
+
+📧 Contato
+
+Se tiver alguma dúvida ou sugestão sobre o projeto, sinta-se à vontade para entrar em contato:
+
+Leandro Rodrigues Campos Oliveira [leandrorodriguescamposti@gmail.com] [https://www.linkedin.com/in/leandro-oliveira-256916172/]
