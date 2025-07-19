@@ -1,0 +1,49 @@
+2025-07-19 00:28:15,795 - INFO - Banco de dados 'monitor.db' e tabela 'monitoramento_sites' verificados/criados com sucesso.
+2025-07-19 00:28:15,795 - INFO - Iniciando verificação de sites.
+2025-07-19 00:28:15,920 - INFO - Status registrado no BD: [https://verointernet.com.br/] -> 200 | OK
+2025-07-19 00:28:15,921 - INFO - [https://verointernet.com.br/] -> 200 | OK
+2025-07-19 00:28:16,120 - INFO - Status registrado no BD: [https://www.google.com/] -> 200 | OK
+2025-07-19 00:28:16,120 - INFO - [https://www.google.com/] -> 200 | OK
+2025-07-19 00:28:16,645 - INFO - Status registrado no BD: [https://meusite.com] -> 200 | OK
+2025-07-19 00:28:16,645 - INFO - [https://meusite.com] -> 200 | OK
+2025-07-19 00:28:16,674 - INFO - Status registrado no BD: [https://sitequenaoexiste.com] -> None | Erro de Conexão: Não foi possível conectar ao site.
+2025-07-19 00:28:16,674 - INFO - [https://sitequenaoexiste.com] -> N/A | Erro de Conexão: Não foi possível conectar ao site.
+2025-07-19 00:28:20,112 - INFO - Alerta de e-mail enviado: 'ALERTA: Problema com o site https://sitequenaoexiste.com' para leandrorodriguescamposti@gmail.com
+2025-07-19 00:28:20,601 - INFO - Status registrado no BD: [https://www.youtube.com/] -> 200 | OK
+2025-07-19 00:28:20,601 - INFO - [https://www.youtube.com/] -> 200 | OK
+2025-07-19 00:28:20,601 - INFO - Verificação de sites concluída.
+2025-07-19 00:30:57,914 - INFO - Banco de dados 'monitor.db' e tabela 'monitoramento_sites' verificados/criados com sucesso.
+2025-07-19 00:30:57,923 - INFO - Iniciando verificação de sites.
+2025-07-19 00:30:58,054 - INFO - Status registrado no BD: [https://verointernet.com.br/] -> 200 | OK
+2025-07-19 00:30:58,054 - INFO - [https://verointernet.com.br/] -> 200 | OK
+2025-07-19 00:30:58,243 - INFO - Status registrado no BD: [https://www.google.com/] -> 200 | OK
+2025-07-19 00:30:58,244 - INFO - [https://www.google.com/] -> 200 | OK
+2025-07-19 00:30:58,623 - INFO - Status registrado no BD: [https://meusite.com] -> 200 | OK
+2025-07-19 00:30:58,623 - INFO - [https://meusite.com] -> 200 | OK
+2025-07-19 00:30:58,638 - INFO - Status registrado no BD: [https://sitequenaoexiste.com] -> None | Erro de Conexão: Não foi possível conectar ao site.
+2025-07-19 00:30:58,638 - INFO - [https://sitequenaoexiste.com] -> N/A | Erro de Conexão: Não foi possível conectar ao site.
+2025-07-19 00:31:01,487 - INFO - Alerta de e-mail enviado: 'ALERTA: Problema com o site https://sitequenaoexiste.com' para leandrorodriguescamposti@gmail.com
+2025-07-19 00:31:02,002 - INFO - Status registrado no BD: [https://www.youtube.com/] -> 200 | OK
+2025-07-19 00:31:02,002 - INFO - [https://www.youtube.com/] -> 200 | OK
+2025-07-19 00:31:02,319 - INFO - Status registrado no BD: [https://orkut.com/] -> 200 | OK
+2025-07-19 00:31:02,319 - INFO - [https://orkut.com/] -> 200 | OK
+2025-07-19 00:31:02,319 - INFO - Verificação de sites concluída.
+2025-07-19 00:31:38,857 - INFO - Banco de dados 'monitor.db' e tabela 'monitoramento_sites' verificados/criados com sucesso.
+2025-07-19 00:31:38,858 - INFO - Iniciando verificação de sites.
+2025-07-19 00:31:38,948 - INFO - Status registrado no BD: [https://verointernet.com.br/] -> 200 | OK
+2025-07-19 00:31:38,948 - INFO - [https://verointernet.com.br/] -> 200 | OK
+2025-07-19 00:31:39,158 - INFO - Status registrado no BD: [https://www.google.com/] -> 200 | OK
+2025-07-19 00:31:39,158 - INFO - [https://www.google.com/] -> 200 | OK
+2025-07-19 00:31:39,558 - INFO - Status registrado no BD: [https://meusite.com] -> 200 | OK
+2025-07-19 00:31:39,558 - INFO - [https://meusite.com] -> 200 | OK
+2025-07-19 00:31:39,566 - INFO - Status registrado no BD: [https://sitequenaoexiste.com] -> None | Erro de Conexão: Não foi possível conectar ao site.
+2025-07-19 00:31:39,566 - INFO - [https://sitequenaoexiste.com] -> N/A | Erro de Conexão: Não foi possível conectar ao site.
+2025-07-19 00:31:42,256 - INFO - Alerta de e-mail enviado: 'ALERTA: Problema com o site https://sitequenaoexiste.com' para leandrorodriguescamposti@gmail.com
+2025-07-19 00:31:42,750 - INFO - Status registrado no BD: [https://www.youtube.com/] -> 200 | OK
+2025-07-19 00:31:42,750 - INFO - [https://www.youtube.com/] -> 200 | OK
+2025-07-19 00:31:43,070 - INFO - Status registrado no BD: [https://orkut.com/] -> 200 | OK
+2025-07-19 00:31:43,070 - INFO - [https://orkut.com/] -> 200 | OK
+2025-07-19 00:31:43,461 - INFO - Status registrado no BD: [http://asas.com/] -> 403 | Erro HTTP: 403 - Forbidden
+2025-07-19 00:31:43,462 - INFO - [http://asas.com/] -> 403 | Erro HTTP: 403 - Forbidden
+2025-07-19 00:31:46,179 - INFO - Alerta de e-mail enviado: 'ALERTA: Problema com o site http://asas.com/' para leandrorodriguescamposti@gmail.com
+2025-07-19 00:31:46,376 - INFO - Verificação de sites concluída.
